@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Student</title>
+</head>
+<body>
+    <h1>Add Student Data</h1>
+
+    <form method="post" action="/student/add">
+        <table>
+            <tr>
+                <td>學號</td>
+                <td>姓名</td>
+                <td>身分證字號</td>
+                <td>身高</td>
+                <td>體重</td>
+                <td>數學</td>
+                <td>英文</td>
+                <td>國文</td>
+            </tr>
+            <tr>
+                <td><input type="number" name="stuid" required></td>
+                <td><input type="text" name="name" maxlength="10"></td>
+                <td><input type="text" name="id" maxlength="10"></td>
+                <td><input type="number" name="height"></td>
+                <td><input type="number" name="weight"></td>
+                <td><input type="number" name="math"></td>
+                <td><input type="number" name="english"></td>
+                <td><input type="number" name="chinese"></td>
+            </tr>
+            <tr>
+                <td>生日</td>
+                <td>IQ</td>
+                <td>城市</td>
+                <td>導師</td>
+            </tr>
+            <tr>
+                <td><input type="date" name="birthday"></td>
+                <td><input type="number" name="iq"></td>
+                <td><input type="text" name="city" maxlength="10"></td>
+                <td><input type="text" name="mentor" maxlength="10"></td>
+            </tr>
+        </table>
+
+        <input type="submit" value="Add Student">
+        <a href="/students/list/template">Cancel</a>
+    </form>
+</body>
+</html>

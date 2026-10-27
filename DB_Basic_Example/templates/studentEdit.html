@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FastAPI Template</title>
+  </head>
+<body>
+	<h1>Edit Student Data</h1>
+	<form method="post" action="/student/update">
+	<table>
+	<tr>
+		<td>學號</td>
+		<td>姓名</td>
+		<td>身分證字號</td>
+		<td>身高</td>
+		<td>體重</td>
+		<td>數學</td>
+		<td>英文</td>
+		<td>國文</td>
+	</tr>
+	<tr>
+		<td>{{ data.stuid }} <input type="hidden" name="stuid" value="{{ data.stuid}}"></td>
+		<td><input type="text" name="name" value="{{ data.name }}" maxlength="10"></td>
+		<td><input type="text" name="id" value="{{ data.id }}" maxlength="10"></td>
+		<td><input type="number" name="height" value="{{ data.height }}"></td>
+		<td><input type="number" name="weight" value="{{ data.weight }}"></td>
+		<td><input type="number" name="math" value="{{ data.math }}"></td>
+		<td><input type="number" name="english" value="{{ data.english }}"></td>
+		<td><input type="number" name="chinese" value="{{ data.chinese }}"></td>
+	</tr>
+	<tr>
+		<td>生日</td>
+		<td>IQ</td>
+		<td>城市</td>
+		<td>導師</td>
+	</tr>
+	<tr>
+		<td><input type="date" name="birthday" value="{{ data.birthday }}"></td>
+		<td><input type="number" name="iq" value="{{ data.iq }}"></td>
+		<td><input type="text" name="city" value="{{ data.city }}" maxlength="10"></td>
+		<td><input type="text" name="mentor" value="{{ data.mentor }}" maxlength="10"></td>
+	</tr>
+	</table>
+	<input type="submit">
+	</form>
+</body>
+</html>
