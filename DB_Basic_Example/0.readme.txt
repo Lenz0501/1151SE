@@ -12,3 +12,8 @@ uv run fastapi dev xxx.py
 
 db.py: utility module for lifespan management and DB connection with connection pools
 students.sql: example data for db usage testing
+--------------------------------------------------------------------------------------------
+
+.\.venv\Scripts\Activate.ps1
+python -m uvicorn main:app --reload
+[開pgAdmin 4]

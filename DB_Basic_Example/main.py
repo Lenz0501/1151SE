@@ -16,6 +16,13 @@ app = FastAPI(lifespan=lifespan)
 # Include the router
 # app.include_router("routes/r", prefix="/") #mount every thing from ./routes/ to url under prefix
 
+@app.get("/")
+async def home():
+    return RedirectResponse(
+        url="/students/list/template",
+        status_code=302
+    )
+
 @app.get("/students/list")
 async def read_users(db=Depends(getDB)):
 	cur=await db.execute("SELECT * FROM students")
